@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Prep1 World!");
+        Console.WriteLine("Hello Prep1 World!"); //in a lot of ways I can see how similar each of these parts are similar to python
 
         Console.Write("What is your first name? ");
         string first = Console.ReadLine();
