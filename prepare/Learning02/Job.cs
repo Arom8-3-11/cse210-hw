@@ -7,6 +7,7 @@ public class Job //"public" is an access modifier for type/members
     public string _jobTitle; //this is a member variable 
     // note to self, when adding a member variable, make sure to add the modifier and string so that the class will work
     public string _company;
+    // each of these become kind of like a common variable placement on its own using text from another page, going to another and displaying it on the original page
     public int _startYear;
     public int _endYear;
 
