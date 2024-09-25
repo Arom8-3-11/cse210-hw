@@ -13,16 +13,16 @@ class Program
         Console.WriteLine("2.) Display Journal");
 
         // save the journal to a file
-        Console.WriteLine("3.) Save to file")
+        Console.WriteLine("3.) Save to file");
 
         // load the journal from a file
-        Console.WriteLine("4.) Load file")
+        Console.WriteLine("4.) Load file");
 
         // quit
-        Console.WriteLine("5.) Quit")
+        Console.WriteLine("5.) Quit");
 
 
-
+        Console.Write
 
 
         // Who was the most interesting person I interacted with today?
