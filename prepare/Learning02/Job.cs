@@ -18,7 +18,7 @@ public class Job //"public" is an access modifier for type/members
     // hence using void will allow that to happen.
 
     {
-        Console.WriteLine($"{_jobTitle} ({_company}) {_startYear}}-{_endYear}");
+        Console.WriteLine($"{_jobTitle} ({_company}) {_startYear} - {_endYear}");
 
     }
 }
