@@ -30,36 +30,49 @@ class Program
         Console.WriteLine("-----------------------------------------");
 
         Console.Write("What would you like to do? (Enter 1-5) ");
-        string options = Console.ReadLine();
-        int option = int.Parse(options);
+        // string options = Console.ReadLine();
+        int option = int.Parse(Console.ReadLine());
 
 
-        Journal ajournal = new Journal();
+        Journal journal = new Journal();
         // Entry anEntry = new Entry();
-
-        if (option = 1)
-        {
-            Entry anEntry = new Entry();
-            ajournal.AddEntry(anEntry);
-        }
-        else if (option = 2)
-        {
-            ajournal.DisplayAll();
-        }
-        else if (option = 3)
+        while (option != 5)
         {
             
-            ajournal.LoadFromFile();
+            if (option == 1)
+            {
+                journal.AddEntry();
+                // string _date = DateTime.Now.ToString("MM/dd/yyyy");
+                // string prompt = new PromptGenerator.GetRandomPrompt();
+                
+                // Entry entry = new AddEntry();
+                // // Entry anEntry = new Entry();
+                // entry._date = _date;
+                // entry._promptText = prompt;
+                // Console.WriteLine($"{prompt}");
+                // Console.Write("- - -> ")    
+                // string user = Console.ReadLine();
+                // entry._entryText = userEntry;         
+                // journal._entries.Add(entry);
+                // journal.AddEntry();
+            }
+            else if (option == 2)
+            {
+                journal.DisplayAll();
+            }
+            else if (option == 3)
+            {
+                journal.LoadFromFile();
+            }
+            else if (option == 4)
+            {
+                journal.SaveToFile();
+            }
+            else 
+            {
+                Console.WriteLine("Have a good day!");
+            }
         }
-        else if (option = 4)
-        {
-            ajournal.SaveToFile();
-        }
-        else 
-        {
-            Console.WriteLine("Have a good day!");
-        }
-
 
         
 

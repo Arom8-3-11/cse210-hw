@@ -1,73 +1,79 @@
+using System;
+using System.IO
 public class Journal 
 
 {
-    // string filename = "journal.txt";
 
-    public List <Entry> _entries;
-    // entries = new List<Entry>();
-
+    public List<Entry> _entries;//do not delete or change
     public PromptGenerator promptGenerator;
 
-    //initialize list of entries
-    string entries = new List<Entry>();
-        // Initializes the prompt generator
-    string _promptGenerator = new PromptGenerator(_prompts);
-    
 
-    //Adds a new entry to the journal from user input
-    public void AddEntry(Entry newEntry) 
+
+
+    public void AddEntry(Entry newEntry)
     {
-        string prompt = _promptGenerator.GetRandomPrompt();
-        
-        string date = DateTime.Now.ToString("MM/dd/yyyy");
+        public string _entries = new List<entry>();
+        string promptGenerator = new PromptGenerator();
+        public string prompt = promptGenerator.GetRandomPrompt();
+        public string date = DateTime.Now.ToString("MM/dd/yyyy");
+        Console.WriteLine($"{Date}, {prompt}");
+        Console.Write("> ");
+        string content = Console.readline();
 
-        Console.WriteLine($"Prompt: {prompt}");
 
-        Console.Write("- - - > ");
-        string content = Console.ReadLine();
     }
 
-    //Displays data input this session
-    public void DisplayAll() 
+    public void DisplayAll()
     {
-        foreach (Entry entry in entries) 
+        foreach (Entry entry in _entries)
         {
             entry.Display();
         }
     }
 
-    //Saves Entries to a file named by the user
-    public void SaveToFile(string filename) 
+    public void SavetoFile(string file)
     {
-        string filename = "journal.txt";
-        
-        StreamWriter outputFile = new StreamWriter(filename); 
-        Console.WriteLine($"Journal entries saved to {filename}");
-
+        string file = "journal.txt";
+        try 
         {
-            foreach (Entry entry in entries) 
+            using (StreamWriter outputFile = new StreamWriter(file))
             {
-                outputFile.WriteLine($"{date} | {entry}");
+                foreach Entry entry in _entries)
+                {
+                    outputFile.WriteLine($"{Entry.Display()}");
+                }
+
             }
+            Console.WriteLine($"Entry saved...");
+
+        }
+        // Console.WriteLine($"Entry saved...");
+        catch (Exception e) 
+        {
+            Console.WriteLine($"Error saving to {file}: {e. Message}")
         }
     }
 
-    //Loads Entries from a file
-    public void LoadFromFile(string filename) 
+    public void LoadFromFile(string file)
     {
-        string filename = "journal.txt";
-
-        using (StreamReader outputFile = new StreamReader(filename)) //helps with reading from a file
+        string file = "journal.txt";
+        try 
         {
-            while (!reader.EndOfStream) // gets value that indicates whether current stream position is at end of stream
+            string file = "journal.txt";
+            string[] lines = System.IO.File.ReadAllLines(file);
+
+            foreach (string line in lines)
             {
-                string dates = reader.ReadLine();
-                string content = reader.ReadLine();
-                Entry entry = new Entry(dates, content);
-                entries.Add(entry);
+                string[] parts = line.Split("|");
+
+                string date = parts[0];
+                string prompt = parts[1];
+                string savedEntry = parts[2];
             }
-        } 
+            
+        }
     }
+
 }
 
 
@@ -85,6 +91,130 @@ public class Journal
 
 
 
+
+
+
+
+
+
+//     // string filename = "journal.txt";
+
+//     // public List<Entry> _entries;
+//     // entries = new List<Entry>();
+
+//     // public PromptGenerator promptGenerator;
+
+//     //initialize list of entries
+//     // string entries = new List<Entry>();
+//         // Initializes the prompt generator
+//     // string _promptGenerator = new PromptGenerator(_prompts);
+    
+
+//     //Adds a new entry to the journal from user input
+//     public static void AddEntry(Entry newEntry) 
+//     {
+//         // public string _prompts = PromptGenerator.GetRandomPrompt();
+        
+//         // public string _date = DateTime.Now.ToString("MM/dd/yyyy");
+
+//         // Console.WriteLine($"Prompt: {_prompts}");
+
+//         // Console.Write("- - - > ");
+//         // public string _entryText = Console.ReadLine();
+
+
+
+
+//         string _date = DateTime.Now.ToString("MM/dd/yyyy");
+//         string prompt = new PromptGenerator.GetRandomPrompt();
+//         Journal journal = new Journal();
+
+//         Entry entry = new Entry();
+//         // Entry anEntry = new Entry();
+//         entry._date = _date;
+//         entry._promptText = prompt;
+//         Console.WriteLine($"{prompt}");
+//         Console.Write("- - -> ");  
+//         string user = Console.ReadLine();
+//         newEntry._entryText = user;         
+//         Entry._entries.Add(newEntry);
+//     }
+
+//     //Displays data input this session
+//     public void DisplayAll() 
+//     {
+//         foreach (Entry entry in _entries) 
+//         {
+//             entry.Display();
+//         }
+//     }
+
+//     //Saves Entries to a file named by the user
+//     public void SaveToFile(string filename) 
+//     {
+//         // Console.Write("Enter the file you want to load from: ");
+//         // string filename = Console.readline();
+//         string filename = "journal.txt";
+
+        
+//         StreamWriter outputFile = new StreamWriter(filename); 
+//         Console.WriteLine($"Journal entries saved to {filename}");
+
+//         {
+//             foreach (Entry entry in entries) 
+//             {
+//                 outputFile.WriteLine($"{date} | {entry}");
+//             }
+//         }
+//     }
+
+//     //Loads Entries from a file
+//     public void LoadFromFile(string filename) 
+//     {
+//         // Console.Write("Enter the file you want to load from: ");
+//         // string filename = Console.readline();
+//         List<Entry> journal = new List<Entry>();
+//         string filename = "journal.txt";
+
+//         using (StreamReader outputFile = new StreamReader(filename)) //helps with reading from a file
+//         {
+//             while (!reader.EndOfStream) // gets value that indicates whether current stream position is at end of stream
+//             {
+//                 string dates = reader.ReadLine();
+//                 string content = reader.ReadLine();
+//                 Entry entry = new Entry(dates, content);
+//                 entries.Add(entry);
+//             }
+//         } 
+//         return journal;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// string filename = "journal.txt";
+//         string[] lines = System.Io.File.ReadAllLines(filename);
+
+//         foreach (string line in lines) 
+//         {
+//             string[] parts = line.Split("|");
+
+//             string date =parts[0];
+//             string Text =parts[1];
+//             string entryText =parts[2];
+//         }
 
 
 
