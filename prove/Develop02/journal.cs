@@ -1,5 +1,5 @@
 using System;
-using System.IO
+using System.IO;
 public class Journal 
 
 {
@@ -12,7 +12,7 @@ public class Journal
 
     public void AddEntry(Entry newEntry)
     {
-        public string _entries = new List<entry>();
+        _entries = new List<Entry>();
         string promptGenerator = new PromptGenerator();
         public string prompt = promptGenerator.GetRandomPrompt();
         public string date = DateTime.Now.ToString("MM/dd/yyyy");
@@ -38,7 +38,7 @@ public class Journal
         {
             using (StreamWriter outputFile = new StreamWriter(file))
             {
-                foreach Entry entry in _entries)
+                foreach (Entry entry in _entries)
                 {
                     outputFile.WriteLine($"{Entry.Display()}");
                 }
@@ -50,13 +50,12 @@ public class Journal
         // Console.WriteLine($"Entry saved...");
         catch (Exception e) 
         {
-            Console.WriteLine($"Error saving to {file}: {e. Message}")
+            Console.WriteLine($"Error saving to {file}: {e. Message}");
         }
     }
 
     public void LoadFromFile(string file)
-    {
-        string file = "journal.txt";
+        // string file = "journal.txt";
         try 
         {
             string file = "journal.txt";

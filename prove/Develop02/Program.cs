@@ -62,11 +62,11 @@ class Program
             }
             else if (option == 3)
             {
-                journal.LoadFromFile();
+                journal.SaveToFile();
             }
             else if (option == 4)
             {
-                journal.SaveToFile();
+                journal.LoadFromFile(string file);
             }
             else 
             {
