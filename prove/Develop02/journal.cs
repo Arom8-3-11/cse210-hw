@@ -16,7 +16,7 @@ public class Journal
         promptGenerator = new PromptGenerator();
         string prompt = promptGenerator.GetRandomPrompt();
         string date = DateTime.Now.ToString("MM/dd/yyyy");
-        Console.WriteLine($"{Date}, {prompt}");
+        Console.WriteLine($"{date}, {prompt}");
         Console.Write("> ");
         string content = Console.readline();
 

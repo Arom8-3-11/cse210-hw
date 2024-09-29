@@ -66,7 +66,7 @@ class Program
             }
             else if (option == 4)
             {
-                journal.LoadFromFile(string file);
+                journal.LoadFromFile(file);
             }
             else 
             {
