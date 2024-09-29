@@ -40,7 +40,7 @@ public class Journal
             {
                 foreach (Entry entry in _entries)
                 {
-                    outputFile.WriteLine($"{Entry.Display()}");
+                    outputFile.WriteLine($"{entry}");
                 }
 
             }
@@ -59,7 +59,7 @@ public class Journal
         string file = "journal.txt";
         try 
         {
-            string file = "journal.txt";
+            file = "journal.txt";
             string[] lines = System.IO.File.ReadAllLines(file);
 
             foreach (string line in lines)
