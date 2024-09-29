@@ -14,8 +14,8 @@ public class Journal
     {
         _entries = new List<Entry>();
         promptGenerator = new PromptGenerator();
-        public string prompt = promptGenerator.GetRandomPrompt();
-        public string date = DateTime.Now.ToString("MM/dd/yyyy");
+        string prompt = promptGenerator.GetRandomPrompt();
+        string date = DateTime.Now.ToString("MM/dd/yyyy");
         Console.WriteLine($"{Date}, {prompt}");
         Console.Write("> ");
         string content = Console.readline();
@@ -53,8 +53,6 @@ public class Journal
             Console.WriteLine($"Error saving to {file}: {e. Message}");
         }
     }
-    public void LoadFromFile(string file)
-        // string file = "journal.txt";
 
     public void LoadFromFile()
     {
