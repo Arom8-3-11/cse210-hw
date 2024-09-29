@@ -13,7 +13,7 @@ public class Journal
     public void AddEntry(Entry newEntry)
     {
         _entries = new List<Entry>();
-        string promptGenerator = new PromptGenerator();
+        promptGenerator = new PromptGenerator();
         public string prompt = promptGenerator.GetRandomPrompt();
         public string date = DateTime.Now.ToString("MM/dd/yyyy");
         Console.WriteLine($"{Date}, {prompt}");
