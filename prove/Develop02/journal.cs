@@ -18,7 +18,7 @@ public class Journal
         string date = DateTime.Now.ToString("MM/dd/yyyy");
         Console.WriteLine($"{date}, {prompt}");
         Console.Write("> ");
-        string content = Console.readline();
+        string content = Console.ReadLine();
 
 
     }
@@ -33,7 +33,7 @@ public class Journal
 
     public void SavetoFile(string file)
     {
-        string file = "journal.txt";
+        file = "journal.txt";
         try 
         {
             using (StreamWriter outputFile = new StreamWriter(file))
