@@ -62,11 +62,8 @@ class Program
             }
             else if (option == 3)
             {
-<<<<<<< HEAD
                 journal.SaveToFile();
-=======
                 journal.LoadFromFile(string file);
->>>>>>> cf1ab79ff3aa1218c0413b87e033ef73f6a5ec8b
             }
             else if (option == 4)
             {
