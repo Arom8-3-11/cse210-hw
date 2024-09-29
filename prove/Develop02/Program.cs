@@ -63,7 +63,6 @@ class Program
             else if (option == 3)
             {
                 journal.SaveToFile();
-                journal.LoadFromFile(string file);
             }
             else if (option == 4)
             {

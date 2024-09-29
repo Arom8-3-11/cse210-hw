@@ -72,6 +72,10 @@ public class Journal
             }
             
         }
+        catch (exception e)
+        {
+            Console.WriteLine($"Error loading from {file}: {e. Message}");
+        }
     }
 
 }
