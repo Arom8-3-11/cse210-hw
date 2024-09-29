@@ -54,7 +54,7 @@ public class Journal
         }
     }
 
-    public void LoadFromFile(string file)
+    public void LoadFromFile()
     {
         string file = "journal.txt";
         try 
