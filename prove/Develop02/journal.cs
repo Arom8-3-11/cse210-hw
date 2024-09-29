@@ -54,8 +54,14 @@ public class Journal
         }
     }
 
+<<<<<<< HEAD
     public void LoadFromFile(string file)
         // string file = "journal.txt";
+=======
+    public void LoadFromFile()
+    {
+        string file = "journal.txt";
+>>>>>>> cf1ab79ff3aa1218c0413b87e033ef73f6a5ec8b
         try 
         {
             string file = "journal.txt";
