@@ -18,7 +18,7 @@ public class Journal
         string date = DateTime.Now.ToString("MM/dd/yyyy");
         Console.WriteLine($"{date}, {prompt}");
         Console.Write("> ");
-        string content = Console.ReadLine();
+        string newEntry = Console.ReadLine();
 
 
     }

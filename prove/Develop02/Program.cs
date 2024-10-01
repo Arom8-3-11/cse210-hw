@@ -41,7 +41,7 @@ class Program
             
             if (option == 1)
             {
-                journal.AddEntry();
+                journal.AddEntry(newEntry);
                 // string _date = DateTime.Now.ToString("MM/dd/yyyy");
                 // string prompt = new PromptGenerator.GetRandomPrompt();
                 
