@@ -28,7 +28,7 @@ public class PromptGenerator//because the "using system is main file, it is not 
     public string GetRandomPrompt()
     {
         Random random = new Random();
-        index = random.Next(_prompts);
+        int index = random.Next();
         return _prompts[index];
         // return "";
     }
