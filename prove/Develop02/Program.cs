@@ -62,7 +62,7 @@ class Program
             }
             else if (option == 3)
             {
-                journal.SaveToFile(file);
+                journal.SaveToFile(entry);
             }
             else if (option == 4)
             {
